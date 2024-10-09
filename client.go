@@ -1070,17 +1070,17 @@ func (mc *ModbusClient) readRegisters(addr uint16, quantity uint16, regType RegT
 	case res.functionCode == req.functionCode:
 		// make sure the payload length is what we expect
 		// (1 byte of length + 2 bytes per register)
-		if len(res.payload) != 1 + 2 * int(quantity) {
-			err = ErrProtocolError
-			return
-		}
+		//if len(res.payload) != 1 + 2 * int(quantity) {
+		//	err = ErrProtocolError
+		//	return
+		//}
 
 		// validate the byte count field
 		// (2 bytes per register * number of registers)
-		if uint(res.payload[0]) != 2 * uint(quantity) {
-			err = ErrProtocolError
-			return
-		}
+		//if uint(res.payload[0]) != 2 * uint(quantity) {
+		//	err = ErrProtocolError
+		//	return
+		//}
 
 		// remove the byte count field from the returned slice
 		bytes	= res.payload[1:]
