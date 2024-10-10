@@ -1,3 +1,8 @@
+Fork of https://github.com/simonvetter/modbus with removed response length
+restrictions.
+
+---
+
 ## Go modbus stack
 
 ### Description
